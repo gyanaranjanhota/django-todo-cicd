@@ -6,9 +6,6 @@ RUN pip install django==3.2
 
 COPY . .
 
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
-
 RUN /bin/sh -c python manage.py migrate
 
 EXPOSE 8000
